@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PEMROGRAMAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            background-image: url("static/foto/background1.jpg");
+        }
+
+        header {
+            position: fixed;
+            background: #22242A;
+            padding: 20px;
+            width: 100%;
+            height: 30px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        tbody {
+            font-size: 17px;
+            font-weight: 300;
+            color: #e8e8e8;
+        }
+
+        .tabelku {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .tabelb {
+            width: auto;
+            margin: auto;
+        }
+
+        .left_area span {
+            color: #9f2ebb;
+        }
+
+        .left_area h3 {
+            color: #fff;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .right_area img {
+            padding: 5px;
+            float: right;
+            margin-top: -47px;
+            margin-right: 40px;
+        }
+
+        .sidebar {
+            background: #2f323a;
+            margin-top: 70px;
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+        }
+
+        .sidebar .profile_image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar h4 {
+            color: #ccc;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            display: block;
+            width: 100%;
+            line-height: 60px;
+            text-decoration: none;
+            padding-left: 40px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transition-property: background;
+        }
+
+        .sidebar a:hover {
+            background: #9f2ebb;
+        }
+
+        .sidebar i {
+            padding-right: 10px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding-top: 70px;
+            background: url(static/foto/background4.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 125vh;
+        }
+        .box {
+            width: 740px;
+            margin: 0 auto;
+            margin-top: 30px;
+            box-shadow: 0 0.30rem 0.75rem rgba(5, 5, 5, 5);
+            transition: all .3s;
+            background-color: #591869;
+            border: solid 5px #ea92ff;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .box:hover {
+            background-color: #2178ea;
+            border: solid 5px #49b2eb;
+            border-top-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            border-top-right-radius: 80px;
+            border-bottom-left-radius: 80px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #22242A;
+            color: #e8e8e8;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left_area">
+            <h3>Pemrograman <span>Web</span></h3>
+        </div>
+        <div class="right_area">
+            <img src="static/foto/profil.jpg" width="50px" height="50px">
+        </div>
+        
+    </header>
+    <div class="sidebar">
+        <center>
+            <img src="static/foto/perusahaan.jpg" class="profile_image" alt="perusahaan">
+            <h4>El dan Glo</h4>
+        </center>
+        <a href="profil.html"><i class="fas fa-desktop"></i><span>Tentang Perusahaan</span></a>
+        <a href="produk.html"><i class="fas fa-shopping-cart"></i><span>Produk</span></a>
+        <a href="login.php"><i class="fas fa-table"></i><span>Data Kepegawaian</span></a>
+        <a href="karir.html"><i class="fas fa-list-ul"></i><span>Karir</span></a>
+        <a href="kontak.html"><i class="fas fa-pencil-alt"></i><span>Kontak</span></a>
+        <a href="keluar.html"><i class="fas fa-sign-out-alt"></i><span>Keluar</span></a>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <tbody>
+                <table border="0" width="100%"
+                    style="padding-left: 55px; padding-right: 0px; padding-top: 15px; padding-bottom: 15px;">
+                    <tr>
+                        <th rowspan="8">
+                            <img src="static/foto/perusahaan.jpg" alt="fotoperusahaan" width="110px" height="160px">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold">PERUSAHAAN ELGLO</td>
+                    </tr>
+                    <tr>
+                        <td>NIP</td>
+                        <td>:</td>
+                        <td>32230179185</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>Jl.Bahagia Makmur no.8</td>
+                    </tr>
+                    <tr>
+                        <td>Telp/Fax</td>
+                        <td>:</td>
+                        <td>021-20392/ 021-20293</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>perusahaanbesar@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>NPWP Perusahaan</td>
+                        <td>:</td>
+                        <td>28.050.102.024</td>
+                    </tr>
+                </table>
+            </tbody>
+        </div>
+        <br />
+        <table class="tabelku" border="1" cellspacing="1" cellpadding="5">
+            <tr>
+                <th style="background-color: #292b60;" rowspan="2">NO</th>
+                <th style="background-color: #292b60;" colspan="3">Pencapaian Perusahaan</th>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">Tahun</th>
+                <th style="background-color: #292b60;">Keterangan</th>
+                <th style="background-color: #292b60;">Tingkat</th>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">1</th>
+                <td style="background-color: #7323d4;">2024</td>
+                <td style="background-color: #7323d4;">3rd The Most Reliable Company International Award</td>
+                <td style="background-color: #7323d4;">Internasional</td>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">2</th>
+                <td style="background-color: #7323d4;">2024</td>
+                <td style="background-color: #7323d4;">The Most Efficient Company</td>
+                <td style="background-color: #7323d4;">Nasional</td>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">3</th>
+                <td style="background-color: #7323d4;">2023</td>
+                <td style="background-color: #7323d4;">2nd Corporate Social Responsibility Award</td>
+                <td style="background-color: #7323d4;">Naional</td>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">4</th>
+                <td style="background-color: #7323d4;">2022</td>
+                <td style="background-color: #7323d4;">The Best Company Award</td>
+                <td style="background-color: #7323d4;">Provinsi</td>
+            </tr>
+            <tr>
+                <th style="background-color: #292b60;">5</th>
+                <td style="background-color: #7323d4;">2021</td>
+                <td style="background-color: #7323d4;">2nd The Best Corporate Public Company</td>
+                <td style="background-color: #7323d4;">Provinsi</td>
+            </tr>
+        </table>
+        <br />
+        <table class="tabelb" border="1" cellspacing="1" cellpadding="5">
+            <th style="background-color: #292b60; text-align: center" colspan="2">Bestseller Brands</th>
+            <tr>
+                <th style="background-color: #7323d4; padding-right: 30px; text-align: left">
+                    <ul>
+                        <li> Attire :
+                            <ol>
+                                <li>Guccyie</li>
+                                <li>Louei Vitonc</li>
+                                <li>Glo'El</li>
+                                <li>Uniqueya</li>
+                            </ol>
+                        </li>
+                    </ul>
+                <th style="background-color: #7323d4; padding-right: 30px; text-align: left">
+                    <ul>
+                        <li> Jewellery :
+                            <ol>
+                                <li>Ornamenty</li>
+                                <li>Bijouterie</li>
+                                <li>El'Glo</li>
+                                <li>Frank n Yo</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <h3><small>@Elisa Hardian & Gloria Warella</small></h3>
+    </div>
+</body>
+
+</html>
