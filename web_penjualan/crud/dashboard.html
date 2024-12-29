@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PEMROGRAMAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            background-image: url("static/foto/background3.jpg");
+        }
+
+        header {
+            position: fixed;
+            background: #ff5900;
+            padding: 20px;
+            width: 100%;
+            height: 30px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        tbody {
+            font-size: 17px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        .tabelku {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .tabelb {
+            width: auto;
+            margin: auto;
+        }
+
+        .left_area span {
+            color: #fff;
+        }
+
+        .left_area h3 {
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .right_area img {
+            padding: 5px;
+            float: right;
+            margin-top: -47px;
+            margin-right: 40px;
+        }
+
+        .sidebar {
+            background: #009dff;
+            margin-top: 70px;
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+        }
+
+        .sidebar .profile_image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar h1 {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #ffffff;
+            display: block;
+            width: 100%;
+            line-height: 60px;
+            text-decoration: none;
+            padding-left: 40px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transition-property: background;
+        }
+
+        .sidebar a:hover {
+            background: #d311ac;
+        }
+
+        .sidebar i {
+            padding-right: 10px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding-top: 70px;
+            background: url("static/foto/background3.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 125vh;
+        }
+
+        .box {
+            width: 740px;
+            margin: 0 auto;
+            margin-top: 30px;
+            box-shadow: 0 0.30rem 0.75rem rgba(5, 5, 5, 5);
+            transition: all .3s;
+            background-color: #d311ac;
+            border: solid 5px #009dff;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .box:hover {
+            background-color: #009dff;
+            border: solid 5px #d311ac;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ff5900;
+            color: #e8e8e8;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left_area">
+            <h3>Pemrograman <span>Web</span></h3>
+        </div>
+        <div class="right_area">
+            <img src="static/foto/ubm.jpg" width="50px" height="50px">
+        </div>
+        
+    </header>
+    <div class="sidebar">
+        <center>
+            <img src="static/foto/perusahaan.jpg" class="profile_image" alt="perusahaan">
+            <h1>Elisa&Gloria</h1>
+        </center>
+        <a href="profil.html"><i class="fas fa-desktop"></i><span>Tentang Perusahaan</span></a>
+        <a href="login.php"><i class="fas fa-list-ul"></i><span>Data Penjualan</span></a>
+        <a href="produk.html"><i class="fas fa-shopping-cart"></i><span>Produk</span></a>
+        <a href="grafik.html".html"><i class="fas fa-chart-line"></i><span>Grafik</span></a>
+        <a href="karir.html"><i class="fa-solid fa-trophy"></i><span>Karir</span></a>
+        <a href="kontak.html"><i class="fas fa-pencil-alt"></i><span>Kontak</span></a>
+        <a href="keluar.html"><i class="fas fa-sign-out-alt"></i><span>Keluar</span></a>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <tbody>
+                <table border="0" width="100%"
+                    style="padding-left: 55px; padding-right: 0px; padding-top: 15px; padding-bottom: 15px;">
+                    <tr>
+                        <th rowspan="9">
+                            <img src="static/foto/background2.jpg" alt="fotoperusahaan" width="110px" height="160px">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold">PERUSAHAAN ELISA&GLORIA</td>
+                    </tr>
+                    <tr>
+                        <td>NIP</td>
+                        <td>:</td>
+                        <td>32230179185</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>Jl. Interstellar Maverick no.8</td>
+                    </tr>
+                    <tr>
+                        <td>Telp/Fax</td>
+                        <td>:</td>
+                        <td>021-20392/ 021-20293</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>perusahaanelglo@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>NPWP Perusahaan</td>
+                        <td>:</td>
+                        <td>82.030.201.042</td>
+                    </tr>
+                </table>
+            </tbody>
+        </div>
+        <br />
+        <table class="tabelku" border="1" cellspacing="1" cellpadding="5">
+            <tr>
+                <th style="background-color: #009dff;" rowspan="2">NO</th>
+                <th style="background-color:  #009dff" colspan="3">Cabang Supermarket EG</th>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">Cabang</th>
+                <th style="background-color: #ff5900;">Wilayah</th>
+                <th style="background-color: #ff5900;">Jam Operasional</th>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">1</th>
+                <td style="background-color: #d311ac;">EG01</td>
+                <td style="background-color: #d311ac;">Jl. Sudirman Jayanto, Bali</td>
+                <td style="background-color: #d311ac;">08:00-17:00 WITA</td>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">2</th>
+                <td style="background-color: #d311ac;">EG02</td>
+                <td style="background-color: #d311ac;">Jl. Surakarta Sunden, Bandung</td>
+                <td style="background-color: #d311ac;">08:00-17:00 WIB</td>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">3</th>
+                <td style="background-color: #d311ac;">EG03</td>
+                <td style="background-color: #d311ac;">Jl. Cendrawasih Polonia, Jakarta</td>
+                <td style="background-color: #d311ac;">08:00-17:00 WIB</td>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">4</th>
+                <td style="background-color: #d311ac;">EG04</td>
+                <td style="background-color: #d311ac;">Jl. Leimena Hative Besar, Ambon</td>
+                <td style="background-color: #d311ac;">08:00-17:00 WIT</td>
+            </tr>
+            <tr>
+                <th style="background-color: #ff5900;">5</th>
+                <td style="background-color: #d311ac;">EG05</td>
+                <td style="background-color: #d311ac;">Jl. Hadiwinangun, Banten</td>
+                <td style="background-color: #d311ac;">08:00-17:00 WIB</td>
+            </tr>
+        </table>
+        <br />
+        <table class="tabelb" border="1" cellspacing="1" cellpadding="5">
+            <th style="background-color: #d311ac; text-align: center" colspan="2">Bestseller Brands</th>
+            <tr>
+                <th style="background-color: #009dff; padding-right: 30px; text-align: left">
+                    <ul>
+                        <li> Foods :
+                            <ol>
+                                <li>IndieMie</li>
+                                <li>Tanggoi</li>
+                                <li>Nabatie</li>
+                                <li>Coco Unchie</li>
+                            </ol>
+                        </li>
+                    </ul>
+                <th style="background-color: #009dff; padding-right: 30px; text-align: left">
+                    <ul>
+                        <li> Beverages :
+                            <ol>
+                                <li>OnoMilk</li>
+                                <li>Green Fieldlsie</li>
+                                <li>Poccari Sweety</li>
+                                <li>Floradina</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <h3><small>--PROJEK UAS 2024 by Elisa Hardian & Gloria Warella--</small></h3>
+    </div>
+</body>
+
+</html>

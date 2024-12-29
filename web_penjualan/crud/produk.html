@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <style>
+        .colored-div{
+            background-color: #ff5900;
+            padding: 40px;
+        }
+        .container {
+            display: flex;
+        }
+        .card {
+            border: 5px solid #d311ac;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            align-items: center;
+            width: 250px;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-right: 10px;
+            align-items: center;
+        }
+        .card div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+        }
+
+        /* style untuk membuat slider */
+        .images {
+            display: flex;
+            width: 100%;
+            transition: 2s;
+        }
+
+        .images img {
+            width: 100%;
+        }
+
+       .wrapper {
+            width: 500px;
+            margin: auto;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slide-1:target ~ .images {
+            margin-left: 0px;
+        }
+
+        #slide-2:target ~ .images {
+            margin-left: -100%;
+        }
+
+        #slide-3:target ~ .images {
+            margin-left: -200%;
+        }
+
+        #slide-4:target ~ .images {
+            margin-left: -300%;
+        }
+
+        #slide-5:target ~ .images {
+            margin-left: -400%;
+        }
+
+        #slide-6:target ~ .images {
+            margin-left: -500%;
+        }
+
+        .navigation a {
+            display: inline-block;
+            height: 25px;
+            width:25px;
+            background-color:#000000;
+            font-size: 0;
+            border-radius: 50%;
+            margin: 3px;
+            transition: 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #ff0565;
+        }   
+
+        .navigation {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin-top: -50px;
+        }
+
+        @media screen and (max-width: 800px){
+            .wrapper{
+                width: 90%;
+            }
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--membuat slider-->
+        <div class="wrapper">
+            <div class="slides">
+                <span id="slide-1"></span>
+                <span id="slide-2"></span>
+                <span id="slide-3"></span>
+                <span id="slide-4"></span>
+                <span id="slide-5"></span>
+                <span id="slide-6"></span>
+
+                <div class="images">
+                    <img src="static/foto/iklan1.jpg"/>
+                    <img src="static/foto/iklan2.jpg"/>
+                    <img src="static/foto/iklan3.jpg"/>
+                    <img src="static/foto/iklan4.jpg"/>  
+                    <img src="static/foto/iklan5.jpg"/>  
+                    <img src="static/foto/iklan6.jpg"/>    
+                </div>
+            </div>
+
+            <!-- Navigasi -->
+            <div class="navigation">
+                <a href="#slide-1">1</a>
+                <a href="#slide-2">2</a>
+                <a href="#slide-3">3</a>
+                <a href="#slide-4">4</a>
+                <a href="#slide-5">5</a>
+                <a href="#slide-6">6</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="colored-div">
+        <h1><bold>PRODUK</bold></h1>
+    </div>
+
+    <div class="container">
+        <div class="img">
+            <div class="card">
+                <h3>Mie</h3>
+                <img src="static/foto/P-202406001.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Cokelat</h3>
+                <img src="static/foto/P-202406004.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Wafer</h3>
+                <img src="static/foto/P-202406010.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Cookies Selai</h3>
+                <img src="static/foto/P-202406011.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Sereal</h3>
+                <img src="static/foto/P-202406008.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="img">
+            <div class="card">
+                <h3>Minuman Jeruk</h3>
+                <img src="static/foto/P-202406005.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Susu Fermentasi</h3>
+                <img src="static/foto/P-202406003.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+         <div class="img">
+            <div class="card">
+                <h3>Ice Cream</h3>
+                <img src="static/foto/P-202406002.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Susu Strawberry</h3>
+                <img src="static/foto/P-202406007.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Susu Rendah Lemak</h3>
+                <img src="static/foto/P-202406009.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+    </div> 
+    <div class="container">
+        <div class="img">
+            <div class="card">
+                <h3>Minuman Ion</h3>
+                <img src="static/foto/P-202406006.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Minuman Soda</h3>
+                <img src="static/foto/P-202406013.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+         <div class="img">
+            <div class="card">
+                <h3>Bumbu Ayam</h3>
+                <img src="static/foto/P-202406014.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Bumbu Sapi</h3>
+                <img src="static/foto/P-202406015.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Tepung</h3>
+                <img src="static/foto/P-202406016.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+    </div> 
+    <div class="container">
+        <div class="img">
+            <div class="card">
+                <h3>Gula</h3>
+                <img src="static/foto/P-202406017.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Saus</h3>
+                <img src="static/foto/P-202406018.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+         <div class="img">
+            <div class="card">
+                <h3>Kental Manis</h3>
+                <img src="static/foto/P-202406019.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Kecap</h3>
+                <img src="static/foto/P-202406020.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="img">
+            <div class="card">
+                <h3>Mentega</h3>
+                <img src="static/foto/P-202406021.jpg">
+                <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+            </div>
+        </div>
+    </div> 
+
+    <div>
+        <a href="http://localhost/web_penjualan/crud/dashboard.html" class="btn btn-warning" role="button">Kembali</a>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Aplikasi Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-12">
+            <h2>Edit Data Product</h2>
+            <form action="{{ url_for('edit', kode=data[0]) }}" method="post" enctype="multipart/form-data">
+                
+
+                <div class="row">                                                                            
+                    <!-- Kolom untuk nama product -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>kode product:</label> 
+                            <input type="txt" name="kode" value="{{data[0]}}" class="form-control" readonly/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Nama product:</label>
+                            <input type="text" name="nama" value="{{data[1]}}" class="form-control" placeholder="Masukan nama product" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Varian product:</label>
+                            <input type="text" name="varian" value="{{data[2]}}" class="form-control" placeholder="Masukan varian product" required />
+                        </div>
+        
+                        <div class="form-group">
+                            <label>Expired:</label>
+                            <input type="text" id="expired" name="expired" value="{{data[3]}}" class="form-control" placeholder="Masukan expired (yyyy-MM-dd)" required />
+                            <small class="form-text text-muted">Format: yyyy-MM-dd (contoh: 2024-12-31)</small>
+                        </div>
+        
+                        <script>
+                            document.querySelector('form').addEventListener('submit', function(e) {
+                                const dateInput = document.getElementById('tgllahir');
+                                const dateValue = dateInput.value;
+                                const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+                                
+                                if (!datePattern.test(dateValue)) {
+                                    alert('Format tanggal salah! Harap gunakan format yyyy-MM-dd.');
+                                    e.preventDefault();
+                                }
+                            });
+                        </script>
+        
+                        <div class="form-group">
+                            <label>Stok:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="stok" id="ada" value="ada" {% if data[4] == "ada" %}checked{% endif %}>
+                                <label class="form-check-label" for="ada">ada</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="stok" id="tidak ada" value="tidak ada" {% if data[4] == "tidak ada" %}checked{% endif %}>
+                                <label class="form-check-label" for="tidak ada">tidak ada</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Berat kotor product:</label>
+                            <input type="text" name="beratkotor" value="{{data[5]}}" class="form-control" placeholder="Masukan berat kotor product" required />
+                        </div>
+    
+        
+                        <div class="form-group">
+                            <label>Harga:</label>
+                            <input type="number" name="harga" value="{{data[6]}}" class="form-control" placeholder="Masukan harga"/>
+                        </div>
+
+                      
+
+                        <!--edit foto ini masih belum berfungsi-->                        
+                        <div class="form-group">
+                            <label>Foto:</label><br>
+                            <input type="file" class="form-control-file" id="Foto" name="foto" accept="image/*" onchange="previewImage(event)">
+                        </div>
+                        <div class="form-group">
+                            <label>Pratinjau Foto</label>
+                            <img id="preview" src="{{ url_for('static', filename='foto/*' + data[0] + '.jpg')}}" alt="Foto" class="img-thumbnail" width="200">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <button type="submit" id="Submit" name="submit" class="btn btn-primary">Edit product</button>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Batal</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk preview foto -->
+    <script>
+        function previewImage(event) {
+            const img = document.getElementById('preview');
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>

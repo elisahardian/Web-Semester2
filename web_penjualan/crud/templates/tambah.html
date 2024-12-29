@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <script>
+        window.onload = async function () {
+            // Anda bisa menambahkan kode lain yang diperlukan di sini
+        }
+
+    </script>
+    <style>
+        /* Menambahkan CSS untuk mengatur layout */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: 48%; /* Memberi lebar agar ada ruang di antara dua elemen */
+        }
+
+        /* Menyesuaikan untuk layar yang lebih kecil */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-group {
+                width: 100%; /* Mengambil seluruh lebar saat di layar kecil */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Tambah Data</h2>
+        <form action="{{ url_for('tambah') }}" method="post" enctype="multipart/form-data">
+            <!-- Bagian kode dan expired -->
+            <div class="form-row">
+                <!-- kode -->
+                <div class="form-group">
+                    <label>kode:</label>
+                    <input type="text" id="kode" name="kode" class="form-control" placeholder="Auto-generate kode" value="{{ kode }}" readonly>
+                </div>
+                <!-- expired -->
+                <div class="form-group">
+                    <label>expired:</label>
+                    <input type="date" name="expired" class="form-control" required>
+                </div>
+            </div>
+            
+            <!-- Bagian Nama product dan stok -->
+            <div class="form-row">
+                <!-- Nama product -->
+                <div class="form-group">
+                    <label>Nama product:</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Masukan nama" required>
+                </div>
+                <!-- stok -->
+                <div class="form-group">
+                    <label>stok:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="stok" id="ada" value="ada" required>
+                        <label class="form-check-label" for="ada">ada</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="stok" id="tidak ada" value="tidak ada">
+                        <label class="form-check-label" for="tidak ada">tidak ada</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bagian varian dan Status -->
+            <div class="form-row">
+                <!-- varian -->
+                <div class="form-group">
+                    <label>varian:</label>
+                    <textarea name="varian" class="form-control" rows="4" placeholder="Masukan varian product" required></textarea>
+                </div>   
+                 <!-- berat kotor -->
+                 <div class="form-group">
+                    <label>berat kotor:</label>
+                    <textarea name="beratkotor" class="form-control" rows="4" placeholder="Masukan berat kotor product" required></textarea>
+                </div>                 
+                <!-- harga -->
+                <div class="form-group">
+                    <label>harga:</label>
+                    <input type="number" name="harga" class="form-control" placeholder="Masukan harga" required>
+                </div>
+
+                <!--Foto-->
+                <div class="box-input">
+                    <label>Foto:</label><br>
+                    <input type="file" name="foto" placeholder="Foto">
+                </div> 
+            </div>
+
+            <!-- Bagian Tombol Simpan dan Batal -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Batal</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
